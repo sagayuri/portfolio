@@ -1,0 +1,19 @@
+$breakpoints: (
+    "sp": "screen and (max-width: 660px)",
+    "tab": "screen and (max-width: 860px)",
+);
+
+@mixin mq($breakpoint: tab) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+      }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}
+

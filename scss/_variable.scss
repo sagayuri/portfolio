@@ -1,0 +1,20 @@
+$font-jp: 'Noto Sans JP', sans-serif;
+$font-en: 'Montserrat', sans-serif;
+
+$font-size: (
+    "10": 0.625rem,
+    "11": 0.687rem,
+    "12": 0.75rem,
+    "13": 0.812rem,
+    "14": 0.875rem,
+    "16": 1rem,
+    "18": 1.125rem,
+    "20": 1.25rem,
+    "24": 1.5rem,
+    "32": 2rem,
+    "40": 2.5rem,
+);
+
+$theme-color: #2A4A58;
+$theme-color-alpha: #8DB1C0;
+$theme-gradient: radial-gradient(rgba(164, 213, 234, 1), rgba(164, 213, 234, 0.36) 25%, rgba(164, 213, 234, 0.13) 69%, rgba(164, 213, 234, 1));
