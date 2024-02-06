@@ -408,6 +408,20 @@ img {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1024px;
+  margin: 0 auto 16px;
+}
+.breadcrumbs li {
+  font-size: 0.75rem;
+}
+.breadcrumbs li a {
+  margin-bottom: 0;
+}
+
 .pageTop {
   position: fixed;
   right: 30px;
@@ -540,13 +554,25 @@ img {
   }
 }
 
+.pageTitle {
+  margin-bottom: 40px;
+  font-size: clamp(1.13rem, 2.07vw + 0.64rem, 2.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media screen and (max-width: 660px) {
+  .pageTitle {
+    margin-bottom: 24px;
+  }
+}
+
 .works {
   margin-bottom: 80px;
 }
 .works__list {
   display: grid;
   gap: 48px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 300px));
 }
 .works__item {
   border: 1px solid #8DB1C0;
@@ -560,9 +586,6 @@ img {
   .card:hover {
     box-shadow: 0 0 10px #8db1c0;
   }
-}
-.card a {
-  display: inline-block;
 }
 .card__thumb {
   width: 100%;
@@ -669,11 +692,18 @@ img {
     background: #8DB1C0;
   }
 }
+.header__navItem a.current {
+  color: #8DB1C0;
+}
+.header__navItem a.current::after {
+  background: #8DB1C0;
+}
 .header__navItem a span {
   font-size: 0.812rem;
 }
 
 .footer {
+  position: relative;
   padding: 16px 0;
   background: #2A4A58;
 }
@@ -760,11 +790,11 @@ img {
 }
 .mainVisual__img {
   position: absolute;
-  left: 0;
+  left: 12%;
   top: 50%;
   transform: translateY(-50%);
   width: 42%;
-  max-width: 645px;
+  max-width: 745px;
 }
 @media screen and (max-width: 660px) {
   .mainVisual__img {
@@ -894,17 +924,21 @@ img {
 .achievement__content {
   margin-bottom: 24px;
 }
-.achievement__contentImg {
+.achievement__content P {
   margin-bottom: 16px;
-}
-.achievement__textWrapper {
-  margin-bottom: 16px;
-}
-.achievement__text {
   font-size: 1rem;
   line-height: 1.8;
 }
+.achievement__content P:last-of-type {
+  margin-bottom: 0;
+}
+.achievement__contentImg {
+  margin-bottom: 16px;
+}
 
+.intention {
+  margin-top: 40px;
+}
 .intention__title {
   position: relative;
   padding-bottom: 8px;
@@ -945,6 +979,7 @@ img {
 .prev_next__prev {
   position: relative;
   display: block;
+  margin-right: auto;
 }
 .prev_next__prev span {
   position: relative;
@@ -977,6 +1012,7 @@ img {
 .prev_next__next {
   position: relative;
   display: block;
+  margin-left: auto;
 }
 .prev_next__next span {
   position: relative;
@@ -1003,4 +1039,226 @@ img {
   right: -42px;
   width: 40px;
   transition: 0.3s;
+}
+
+.privacy {
+  max-width: 600px;
+  padding: 0 10px;
+  margin: 80px auto;
+}
+@media screen and (max-width: 660px) {
+  .privacy {
+    margin: 32px auto;
+  }
+}
+.privacy__lead {
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 660px) {
+  .privacy__content {
+    margin-bottom: 32px;
+  }
+}
+.privacy__content p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.privacy__contentTitle {
+  border-bottom: 1px solid #8DB1C0;
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.privacy__list {
+  list-style-type: disc;
+  padding-left: 32px;
+  margin-bottom: 16px;
+}
+.privacy__list li {
+  margin-bottom: 8px;
+}
+.privacy__subTitle {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.privacy a {
+  display: inline-block;
+  margin-bottom: 4px;
+  text-decoration: underline;
+  transition: 0.3s;
+  word-wrap: break-word;
+}
+@media (hover: hover) and (pointer: fine) {
+  .privacy a:hover {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+}
+
+.contact {
+  max-width: 600px;
+  padding: 0 10px;
+  margin: 80px auto;
+}
+.contact__lead {
+  margin-bottom: 32px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.contact__buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.contact__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
+  color: #fff;
+}
+.contact__button::after {
+  position: absolute;
+  bottom: 16px;
+  right: 26px;
+  transform: skewX(60deg);
+  display: block;
+  width: 20px;
+  height: 5px;
+  border-right: solid 2px #fff;
+  border-bottom: solid 1px #fff;
+  transition: 0.3s;
+  content: "";
+}
+@media (hover: hover) and (pointer: fine) {
+  .contact__button:hover::after {
+    right: 16px;
+    width: 30px;
+  }
+}
+.contact__reset {
+  padding: 10px 24px;
+  border: 1px solid #2A4A58;
+  border-radius: 5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .contact__reset:hover {
+    opacity: 0.7;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover {
+    text-decoration: none;
+  }
+}
+
+.form {
+  margin-bottom: 48px;
+}
+.form__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.form__name {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 45%;
+}
+.form__title {
+  font-size: 1rem;
+  line-height: 1;
+}
+.form__required {
+  padding: 2px 4px;
+  background: #B58130;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.form__input {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #8DB1C0;
+  border-radius: 3px;
+}
+.form__input:focus {
+  outline: 1px solid #2A4A58;
+}
+
+.confirm {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 48px;
+}
+.confirm__check {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #2A4A58;
+  border-radius: 3px;
+  margin-right: 8px;
+  accent-color: #2A4A58;
+}
+.confirm__link {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .confirm__link:hover {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 895px;
+  padding: 0 10px;
+  margin: 80px auto;
+}
+@media screen and (max-width: 660px) {
+  .error {
+    flex-direction: column;
+    gap: 40px;
+    margin: 32px auto;
+  }
+}
+.error__content {
+  max-width: 512px;
+}
+.error__message {
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+@media screen and (max-width: 660px) {
+  .error__message {
+    margin-bottom: 16px;
+  }
+}
+.error img {
+  max-width: 383px;
+  height: auto;
+}
+@media screen and (max-width: 660px) {
+  .error img {
+    width: 85%;
+  }
 }

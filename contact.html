@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagayuri Design|個人情報保護方針</title>
+    <meta name="description" content="個人情報保護方針">
+    <meta property="og:title" content="Sagayuri Design|個人情報保護方針">
+    <meta property="og:url" content="https://sagayuri.com/portfolio/">
+    <meta property="og:description" content="個人情報保護方針">
+    <meta property="og:image" content="./img/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://sagayuri.com/portfolio/privacy">
+    <link rel="icon" href="./img/favicon.ico" type="./favicon.ico">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__logo">
+            <a href="/index.html"><img src="./img/logo.svg" alt="Sagayuri Design" width="239" height="34"></a>
+        </h1>
+        <nav class="header__nav">
+            <ul class="header__navList">
+                <li class="header__navItem">
+                    <a href="#works">
+                        <span class="enFont">Works</span>
+                        制作実績
+                    </a>
+                </li>
+                <li class="header__navItem">
+                    <a href="#service">
+                        <span class="enFont">Service</span>
+                        サービス
+                    </a>
+                </li>
+                <li class="header__navItem">
+                    <a class="current" href="./contact.html">
+                        <span class="enFont">Contact</span>
+                        お問い合わせ
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact">
+        <h2 class="pageTitle">お問い合わせ</h2>
+        <div class="contact__lead">
+            <p>
+                制作のお問い合わせ、ご相談の際は下記のフォームよりご相談ください。<br>1〜3営業日以内に折り返しご連絡させていただきます。
+            </p>
+        </div>
+        <form action="" method="get" class="form">
+                <div class="form__content">
+                    <div class="form__name">
+                        <label class="form__title" for="name">お名前</label>
+                        <span class="form__required">必須</span>
+                    </div>
+                    <input class="form__input" type="text" name="name" required>
+                </div>
+                <div class="form__content">
+                    <div class="form__name">
+                        <label class="form__title" for="ruby">よみがな</label>
+                        <span class="form__required">必須</span>
+                    </div>
+                    <input class="form__input" type="text" name="ruby" required>
+                </div>
+                <div class="form__content">
+                    <div class="form__name">
+                        <label class="form__title" for="mail">メールアドレス</label>
+                        <span class="form__required">必須</span>
+                    </div>
+                    <input class="form__input" type="text" name="mail" required>
+                </div>
+                <div class="form__content">
+                    <div class="form__name">
+                        <label class="form__title" for="content">ご相談内容</label>
+                        <span class="form__required">必須</span>
+                    </div>
+                    <textarea class="form__input" name="content" id="content" cols="30" rows="10"></textarea>
+                </div>
+        </form>
+        <div class="confirm">
+            <label>
+                <input class="form__input confirm__check" type="checkbox" name="" id="">
+                <span><a class="confirm__link" href="./privacy.html">個人情報保護方針</a>に同意します。</span>
+            </label>
+        </div>
+        <div class="button contact__button contact__send">
+            <input type="submit" name="submitConfirm" value="確認画面へ">
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <button id="js-scrollTop" class="pageTop"><img src="./img/pageTop.webp" alt="ページトップへ戻る"></button>
+        <small>©️ 2023 Sagayuri Design.</small>
+    </footer>
+
+    <script src="./jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>
